@@ -30,7 +30,7 @@
     width: 100%;
     z-index: 3;
 
-    animation: modal 1s 2ms;
+    animation: modal 500ms 150ms;
     animation-fill-mode: forwards;
     visibility: hidden;
     opacity: 0;    
@@ -47,6 +47,8 @@
 }
 .btn_:hover .color_x {
     fill: #2196F3;
+    transition: all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .color_x{
     fill: #000000;
@@ -63,14 +65,15 @@
     width: 30px;
     line-height: 30px;
 
-    animation: modal 1s 1ms  forwards;
+    animation: modal 150ms 1ms  forwards;
     visibility:hidden;
     opacity: 0;
     overflow-y: hidden;
 }
 #cerrar:checked + label, #cerrar:checked ~ .backdrop {
     display: none;
-    transition: 150ms ease;
+    transition: all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -180,16 +183,20 @@
 
 .data-modal form input:hover{
     border-color: #2196F3;
-    transition: 150ms ease;
+    transition: all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .data-modal label:hover .icon_frm{
     fill: #2196F3;
-    transition: 150ms ease;
+    transition: all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .data-modal label:focus-within .icon_frm{
     fill: #2196F3;
-    transition: 150ms ease;
+    transition: all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /* Iconos modal  */
 
@@ -237,6 +244,13 @@
 
     cursor: pointer;
 }
+
+.terms:hover{
+    color: #2196F3;
+    transition: 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 /* Icono Checked terminos y condiciones */
 
 #form{
@@ -261,9 +275,10 @@
     transition: 150ms ease;
 
 }
-#form2:hover{
+.terms:hover #form2{
     border: #46a8f8 solid 1px ;
     transition: 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -814,6 +829,7 @@ td {
     font-weight: 500;
     font-size: 16px;
     z-index: 50;
+    cursor: pointer;
 }
 .filters button:hover{
     background-color: #46a8f8;
@@ -830,6 +846,7 @@ td {
     height: auto;
     left: 0;
     width: 100%;
+
 }
 h3{
     font-family: 'Roboto';
@@ -846,11 +863,14 @@ h3{
     left: 0;
     justify-content: center;
     width: 100%;
+
 }
 .block{
     display:block;
     justify-content:center;
     left: 0%;
+    cursor: pointer;
+
 }
 
 .section_project .proj:hover{
