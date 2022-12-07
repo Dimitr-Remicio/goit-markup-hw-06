@@ -494,7 +494,7 @@ h6{
     height: 600px;
     left: 0%;
     top: 70px;
-    backdrop-filter: brightness(1.5);
+    backdrop-filter: brightness(0.9);
 
 
     background-image: url(../images/background.jpg);
@@ -593,6 +593,7 @@ h6{
 
 
 table{
+
     margin: 40px 25px 0px;
     width: 1130px;
     left: 0%;
@@ -669,51 +670,50 @@ td {
     left: 0%;
     padding-top: 30px;
 }
-
 .rectangle{
     display: flex;
     position: absolute;
-    top: 355px;
-    height: 60px;
-    width: 350px;
     background-color: #00000083;
-    right: 768px;
-
-
     text-align: center;
     justify-content: center;
     color: #FFFFFF;
+
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  all 150ms ease;
+
 }
-.rectangle1{
-    display: flex;
-    position: absolute;
+.list_d:hover .rectangle {
+    opacity: 100;    
+    transition:  all 150ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.n1{
+    top: 355px;
+    height: 60px;
+    width: 350px;
+    right: 768px;
+
+}
+.n2{
     top: 355px;
     height: 60px;
     width: 349px;
     right: -8px;
-    background-color: #00000083;
-
-    justify-content: center;
-    color: #FFFFFF;
-    
 }
-.rectangle2{
-    display: flex;
-    position: absolute;
+.n3{
     top: 355px;
     height: 60px;
     width: 349px;
-    background-color: #00000083;
     right: -781px;
-
-    text-align: center;
-    justify-content: center;
-    color: #FFFFFF;
 }
 
 .list_d{
     display: inline;
     left: 0%;
+    transition:  all 250ms ease;
+
 }
 
 /* Nuestro Equipo */
@@ -1025,7 +1025,7 @@ h3{
 }
 .ubication_{
     position: absolute;
-    left: 13%;
+    left: 10%;
     top: 60px;
     line-height: 27px;
 }
@@ -1037,7 +1037,7 @@ h3{
     gap: 80px;
     margin: 0 auto;
     justify-items: center;
-    left: 13%;
+    left: 10%;
     width: auto;
     top: 20px;
 
@@ -1055,33 +1055,35 @@ h3{
 .email_2{
     position: absolute;
     color: rgb(255, 255, 255, 0.6);
-    left: 13%;
+    left: 10%;
     top: 120px;
 }
 .number_2{
     position: absolute;
     color: rgb(255, 255, 255, 0.6);
-    left: 13%;
+    left: 10%;
     top: 150px;
 }
 .find{
+    position: absolute;
     display: flex;
-    margin-left: 550px;
-    margin-top: 20px;
-}
-
-.social-icons-{
-    position: relative;
-    display: flex;
-    margin-left: 550px;
-    z-index: 30;
-}
-  
-  .social-icon {
-    display: flex;
+    left: 30%;
+    top: 20px;
     align-items: center;
     justify-content: center;
+
+}
+
+.social-icon {
     position: relative;
+    display:inline;
+    gap: 10px;
+    width: 100%;
+    top: 5em;
+    left: 30%;
+
+    align-items: center;
+    justify-content: center;
     width: 60px;
     z-index: 30;
 
@@ -1093,7 +1095,7 @@ h3{
     bottom: 0;
     top:40px;
     right: 10%;
-    width: 600px;
+    width: auto;
     height: 100px;
 
 
